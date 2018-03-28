@@ -13,17 +13,6 @@ import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 
 public class BaseScreen {
 
-    @Before
-    public void before() {
-        loginScreen = new LoginScreen();
-        landingScreen = new LandingScreen();
-        appNavigation = new AppNavigation();
-    }
-
-    protected LoginScreen loginScreen;
-    protected LandingScreen landingScreen;
-    protected AppNavigation appNavigation;
-
     void type(ViewInteraction viewInteraction, String text) {
         if (isElemDisplayed(viewInteraction)) {
             viewInteraction
